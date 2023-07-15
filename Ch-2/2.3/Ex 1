@@ -1,0 +1,36 @@
+// তোমাকে n তম প্যালিনড্রম সংখ্যা প্রিন্ট করতে হবে (n < 100)
+#include<iostream>
+using namespace std;
+
+bool isPalindrome(int num){
+
+    int orginalnum,reversednum=0,remainder;
+    orginalnum = num;
+
+    while(num != 0){
+          remainder = num % 10;
+          reversednum= reversednum * 10 + remainder ;
+          num = num / 10 ;
+    }
+  return orginalnum == reversednum;
+}
+
+int main(){
+
+  int i ,n ,j,m=1;
+
+  cout << "Enter the value of (n) for n-th number of palindrome  : " ;
+  cin >> n ;
+  for(j= 1 ; j<= n ; j++ ){
+
+  for(i= m ;       ; i++ ){
+
+     if (isPalindrome(i)){
+          m = i+1;
+          break;
+     }
+   }
+ }
+ cout<< n << "-th palindrome is " << i ;
+}
+
