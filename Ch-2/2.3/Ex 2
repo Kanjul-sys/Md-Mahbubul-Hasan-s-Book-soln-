@@ -1,1 +1,12 @@
+//n এর মান দেওয়া আছে, তোমাকে Sum(i=1 to n) of i*(n-i+1) এর মান বের করতে হবে|
+#include<iostream>
+using namespace std ;
+
+int main(){
+double n ;
+cin >> n ;
+double sum =n*(n+1)*((n+2)/6);
+cout<<sum;
+}
+
 
