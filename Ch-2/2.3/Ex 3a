@@ -1,1 +1,13 @@
 
+#include<iostream>
+using namespace std ;
+
+int main(){
+int X ,Y ;
+cin >> X >> Y;
+
+if(X<Y) cout << "Large number is " << Y;
+
+else    cout << X;
+}
+
