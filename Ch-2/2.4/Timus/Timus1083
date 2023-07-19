@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n,k,i,result=1;
+    string S;
+    cin>>n>>S;
+    k=S.size();
+    for(i=n ; i>=1 ; i-=k){
+          result*=i;
+    }
+    cout<<result;
+}
