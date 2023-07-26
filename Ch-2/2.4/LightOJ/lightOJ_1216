@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define PI acos(-1.0)
+
+int main(){
+    double t,r1,r2,h,p;
+    double nR,extra,volume;
+    
+    cout << fixed << setprecision(6);
+    cin>>t;
+    
+    for(int i=1;i<=t;i++){
+
+        cin>>r1>>r2>>h>>p;
+
+        extra=((r1-r2)*p)/h;        
+        nR=r2+extra;
+        volume =(PI/3)*p*(nR*nR+r2*r2+nR*r2);
+        
+        cout << "Case " <<i <<": " << volume <<endl;
+    }
+}
+
