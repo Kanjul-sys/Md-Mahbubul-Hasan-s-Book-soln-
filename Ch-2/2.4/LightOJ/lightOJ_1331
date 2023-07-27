@@ -1,0 +1,41 @@
+// Add some code
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+double angle(double a , double b , double c){
+
+     return acos((a*a+b*b-c*c)/(2*a*b));
+
+}
+//area of segment of a circle is=
+double area(double r ,double deg){
+
+     return (0.5*r*r*deg);
+}
+
+int main(){
+     cout << fixed << setprecision(10);
+     int i , t ;
+     double r1 , r2 , r3 , area1, a , b , c , s ,x , y ,z ,A ,B ,C,result;
+     cin>>t;
+     for(i=1 ; i<=t ;i++){
+          cin>>r1>>r2>>r3;
+          a=r1+r3;
+          b=r3+r2;
+          c=r1+r2;
+          s=(a+b+c)/2.0;
+          area1 =sqrt(s*(s-a)*(s-b)*(s-c));
+
+          A= angle(b,c,a);
+          B= angle(a,c,b);
+          C= angle(a,b,c);
+
+          result =area1-area(r3,C)-area(r2,A)-area(r1,B);
+
+          cout<<"Case "<<i<<": "<<result<<endl;
+     }
+}
+
+
+
